@@ -1,6 +1,6 @@
 Project Overview
 
-This repository contains an end-to-end, reproducible pipeline for building an integrated customer segmentation and behavioural analytics framework on Walmart-style transactional data. The project combines RFM (Recency–Frequency–Monetary) scoring and promotion use rate with k-means clustering, promotion-use profiling, churn flags, and hypothesis testing to translate raw sales logs into actionable customer segmentations for targeting, retention, and offer design.
+This repository contains an end-to-end, reproducible pipeline for building an integrated customer segmentation and behavioural analytics framework on Walmart-style transactional data. The project combines RFM (Recency-Frequency-Monetary) scoring and promotion use rate with k-means clustering, promotion-use profiling, churn flags, and hypothesis testing to translate raw sales logs into actionable customer segmentations for targeting, retention, and offer design.
 
 Secured 1st place as a three-member team, competing against 10 other teams at the project show.
 I worked on data wrangling, RFM, promotion behaviour, k-means clustering, churn rate, and hypothesis tests (Spearman + simple linear regression) in R (RStudio); visualizations in R, Power BI, and Tableau.
