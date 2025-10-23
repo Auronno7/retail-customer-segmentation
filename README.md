@@ -29,7 +29,7 @@ This executes all numbered steps that are in the Scripts folder in one go (1…7
 Option B: Run Step-by-step
 1. Ensure Datasets/Walmart.csv exists in your RStudio Working Directory.
 2. Open RStudio
-3. Run scripts individually in chronological order like I labled them 1. Descriptive Statistics.R, 2. Total Revenue by Store Location.R, 7. K-means Clustering.R etc.
+3. Run each scripts individually in chronological order like I labled them 1. Descriptive Statistics.R, 2. Total Revenue by Store Location.R, 7. K-means Clustering.R etc.
 This is useful if you don't need/want to do all the analysis (e.g. you can choose to do RFM (Segmentation) but ignore K-means Clustering)
 
 Opening the Tableau Dashboards
