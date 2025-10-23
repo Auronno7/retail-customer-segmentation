@@ -15,7 +15,7 @@ Packages used: tidyverse, lubridate, janitor, cluster, factoextra/ggplot2, etc. 
 Data Files You Must Have (Important)
 
 The R scripts will not run without Datasets/Walmart.csv.
-The Tableau workbooks in Visualizations require Datasets/Visualization (Dataset).xlsx.
+The Tableau workbooks in Visualizations/ require Datasets/Visualization (Dataset).xlsx.
 If Tableau prompts for a missing source: Data Source > Edit Connection > browse to Visualization (Dataset).xlsx.
 
 How to reproduce the analysis
