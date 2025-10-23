@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0221.0754                               -->
+<workbook original-version='18.1' source-build='2019.4.4 (20194.20.0221.0754)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Promotion (Project)' inline='true' name='federated.1no563g1xv29f811nr3891web6hf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Visualization (Dataset)' name='excel-direct.08mrqzm1h00gco1fwsheq1mpsq65'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Hp/OneDrive/Documents/Applied Decision Modeling/Visualization (Dataset).xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.08mrqzm1h00gco1fwsheq1mpsq65' name='Promotion (Segmentation)' table='[&apos;Promotion (Segmentation)$&apos;]' type='table'>
+          <columns gridOrigin='A1:C4:no:A1:C4:0' header='yes' outcome='2'>
+            <column datatype='string' name='Promotion Segmentations' ordinal='0' />
+            <column datatype='integer' name='Promotion Number of Customers' ordinal='1' />
+            <column datatype='real' name='Promotion Customers %' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Promotion Segmentations</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Promotion Segmentations]</local-name>
+            <parent-name>[Promotion (Segmentation)]</parent-name>
+            <remote-alias>Promotion Segmentations</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promotion Number of Customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Promotion Number of Customers]</local-name>
+            <parent-name>[Promotion (Segmentation)]</parent-name>
+            <remote-alias>Promotion Number of Customers</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Promotion Customers %</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Promotion Customers %]</local-name>
+            <parent-name>[Promotion (Segmentation)]</parent-name>
+            <remote-alias>Promotion Customers %</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Promotion (Segmentation)]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C4:no:A1:C4:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Promotion Segmentations1' datatype='string' name='[Promotion Segmentations]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.466581' measure-ordering='alphabetic' measure-percentage='0.533419' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Bangladesh&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Promotion Segmentation'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Promotion (Project)' name='federated.1no563g1xv29f811nr3891web6hf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1no563g1xv29f811nr3891web6hf'>
+            <column datatype='real' name='[Promotion Customers %]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Promotion Number of Customers]' role='measure' type='quantitative' />
+            <column caption='Promotion Segmentations1' datatype='string' name='[Promotion Segmentations]' role='dimension' type='nominal' />
+            <column-instance column='[Promotion Segmentations]' derivation='None' name='[none:Promotion Segmentations:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Promotion Customers %]' derivation='Sum' name='[sum:Promotion Customers %:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Promotion Number of Customers]' derivation='Sum' name='[sum:Promotion Number of Customers:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1no563g1xv29f811nr3891web6hf].[sum:Promotion Customers %:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1no563g1xv29f811nr3891web6hf].[sum:Promotion Number of Customers:qk]' />
+              <color column='[federated.1no563g1xv29f811nr3891web6hf].[sum:Promotion Number of Customers:qk]' />
+              <text column='[federated.1no563g1xv29f811nr3891web6hf].[none:Promotion Segmentations:nk]' />
+              <text column='[federated.1no563g1xv29f811nr3891web6hf].[sum:Promotion Customers %:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='28' />
+                <format attr='font-weight' value='bold' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E721D8ED-A15E-49EA-B230-8B57F84DBD9C}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Promotion Segmentation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1no563g1xv29f811nr3891web6hf].[sum:Promotion Number of Customers:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1no563g1xv29f811nr3891web6hf].[none:Promotion Segmentations:nk]</field>
+            <field>[federated.1no563g1xv29f811nr3891web6hf].[none:Promotion Type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{59602FC5-4E18-49C6-A27B-8B849F09F87B}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Promotion Segmentation' width='192'>
+      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
+      18/6PoAQ/86m3DlcpkIItUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCa
+      BCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkA
+      QmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCU
+      JgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkS
+      gFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEI
+      pUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCa
+      BCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkAQmkSgFCaBCCUJgEIpUkA
+      QmkSgFCaBCCU5ajTSQBCXaHeRglAqKve2iQBCLVJAEJpEoBQmgQglCYBCKVJAEJpEoBQmgQg
+      lCYBCKVJAEJpEoBQmgQglCYBCKVJAEJpEoBQmgQglCYBCKVJAEJpEoBQmgQglCYBCKVJAEJp
+      EoBQmgQglCYBCKVJAEJpEoBQmgQglCYBCKVJAEJpEoBQmgQglCYBCKVJAEJpEoBQmgQglCYB
+      CKVJAEJpEoBQmgQglCYBCKVJAEJpEoBQmgQglCYBCKVJAEJpEoBQmgQglCYBCKVJAEJpEoBQ
+      mgQglCYBCKVJAEJpDq0vRPTsdr3GIcSvzsfFzD8BHXvfxhVK2kYAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
